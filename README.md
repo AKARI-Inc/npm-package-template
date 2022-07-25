@@ -1,5 +1,4 @@
-# AKARI template
+# npm-package-template
 
-燈で使う GitHub レポジトリのテンプレートです。PR や Issue のテンプレートが書かれています。
-
-テンプレートの改変 PR はいつでも受け付けています！
+https://zenn.dev/sprout2000/books/9325fe6c9c1ba9
+を基に作成。
