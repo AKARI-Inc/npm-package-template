@@ -20,4 +20,3 @@ npm test
 ```bash
 npx http-server -o coverage/lcov-report
 ```
-
