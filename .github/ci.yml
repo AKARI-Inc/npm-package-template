@@ -1,0 +1,25 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-lint:
+    timeout-minutes: 3
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: '.'
+    steps:
+      - uses: actions/checkout@v3.0.2
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm install
+      - run: npm test
+      - run: npm run lint
