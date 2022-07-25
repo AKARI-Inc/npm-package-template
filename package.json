@@ -1,7 +1,7 @@
 {
-  "name": "csv-customize",
+  "name": "npm-package-template",
   "version": "1.0.0",
-  "description": "this package customizes csv to given formats",
+  "description": "npm package template",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -18,6 +18,9 @@
   "files": [
     "dist"
   ],
+  "bin": {
+    "my-hello-lib": "dist/bin/index.js"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
