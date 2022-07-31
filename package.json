@@ -1,6 +1,6 @@
 {
   "name": "npm-package-template",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "npm package template",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
