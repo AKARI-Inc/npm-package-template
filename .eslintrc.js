@@ -5,7 +5,7 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 'latest',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['sort-keys-fix', 'import', 'unused-imports', '@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -20,8 +20,36 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js', 'src/migrations/*.ts'],
   rules: {
-    // quotes: ['error', 'single', {'avoidEscape': true }],
-    // semi: ['error', 'never'],
+    eqeqeq: ['error', 'always', { null: 'never' }],
+    // 'func-style': 'warn', 関数を禁止するかどうか
+    'import/default': 'off',
+    'import/extensions': [
+      'error',
+      'never',
+      { json: 'always', svg: 'always', gen: 'always' },
+    ],
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
+    'import/order': [
+      'error',
+      { 'newlines-between': 'always', alphabetize: { order: 'asc' } },
+    ],
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'TSEnumDeclaration',
+        message: "Don't use enums. Use union types instead.",
+      },
+      {
+        selector: 'TSInterfaceDeclaration',
+        message: "Don't use interfaces. Use types instead.",
+      },
+      {
+        selector: 'WithStatement',
+        message: "Don't use with statements.",
+      },
+    ],
     'arrow-parens': 'error',
     'arrow-spacing': 'error',
     'generator-star-spacing': 'error',
