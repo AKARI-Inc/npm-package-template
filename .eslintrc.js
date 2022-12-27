@@ -21,6 +21,7 @@ module.exports = {
   ignorePatterns: ['.eslintrc.js', 'src/migrations/*.ts'],
   rules: {
     eqeqeq: ['error', 'always', { null: 'never' }],
+    curly: 'error',
     // 'func-style': 'warn', 関数を禁止するかどうか
     'import/default': 'off',
     'import/extensions': [
